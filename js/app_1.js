@@ -31,11 +31,7 @@ featureLayer.on('ready',function(){
   });
 });
 
-featureLayer.on('ready',function(){
-  this.eachLayer(function(layer){
-    layer.bindPopup('Hi, this park is ' + layer.feature.properties.NAME);
-  });
-});
+
 
 var dataFileToAdd = 'data/historic_sites.geojson';
 
