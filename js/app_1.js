@@ -25,6 +25,12 @@ featureLayer.on('ready',function(){
   map.fitBounds(featureLayer.getBounds());
 });
 
+featureLayer.on('ready',function(){
+  this.eachLayer(function(layer){
+    layer.bindPopup('Hi, this park is called ' + layer.feature.properties.NAME);
+  });
+});
+
 var dataFileToAdd = 'data/historic_sites.geojson';
 
 var featureLayer = L.mapbox.featureLayer().loadURL(dataFileToAdd).addTo(map)
