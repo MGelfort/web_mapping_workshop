@@ -24,3 +24,17 @@ featureLayer.on('ready',function(){
   });
   map.fitBounds(featureLayer.getBounds());
 });
+
+var dataFileToAdd = 'data/historic_sites.geojson';
+
+var featureLayer = L.mapbox.featureLayer().loadURL(dataFileToAdd).addTo(map)
+
+featureLayer.on('ready',function(){
+  this.setStyle({
+    'color':'#ec008c',
+    'fillColor':'#ec008c',
+    'weight':4,
+    'opacity':.7
+  });
+  map.fitBounds(featureLayer.getBounds());
+});
