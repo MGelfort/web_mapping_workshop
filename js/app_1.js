@@ -44,3 +44,9 @@ featureLayer.on('ready',function(){
   });
   map.fitBounds(featureLayer.getBounds());
 });
+
+featureLayer.on('ready', function(){
+  this.eachLayer(function(layer){
+    layer.bindPopup('Trail Name: ' + layer.feature.properties.name);
+  });
+});
