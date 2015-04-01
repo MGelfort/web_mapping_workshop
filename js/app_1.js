@@ -47,6 +47,6 @@ featureLayer.on('ready',function(){
 
 featureLayer.on('ready', function(){
   this.eachLayer(function(layer){
-    layer.bindPopup('Trail Name: ' + layer.feature.properties.name);
+    layer.bindPopup('Hi, this park is ' + layer.feature.properties.NAME);
   });
 });
